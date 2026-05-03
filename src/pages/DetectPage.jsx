@@ -95,7 +95,7 @@ export default function DetectPage({ user, onResult, showToast }) {
           {error && <p className="form-error">⚠ {error}</p>}
 
           <button type="submit" className="btn btn-primary btn-full" disabled={analyzing || !imgSrc}>
-            {analyzing ? <><span className="spinner" /> Analysing with YOLOv5...</> : '🔬 Detect Disease'}
+            {analyzing ? <><span className="spinner" /> Analysing ...</> : '🔬 Detect Disease'}
           </button>
         </form>
       </div>
