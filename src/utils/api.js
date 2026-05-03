@@ -68,7 +68,7 @@ export function normaliseScan(scan) {
     userName:    scan.userName,
     plantName:   scan.plantName,
     notes:       scan.notes,
-    imgSrc:      scan.imageData || null,
+    imgSrc:      scan.imageData ? (scan.imageData.startsWith('data:') ? scan.imageData : `data:image/jpeg;base64,${scan.imageData}`) : null,
     submittedAt: scan.createdAt,
     label:       scan.label,
     isHealthy:   scan.isHealthy,
